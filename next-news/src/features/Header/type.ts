@@ -2,5 +2,6 @@ export interface Props {
 }
 
 export interface ModelReturnProps {
-    greeting: string;
+    showOffcanvas: boolean;
+    setShowOffcanvas: React.Dispatch<React.SetStateAction<boolean>>;
 }

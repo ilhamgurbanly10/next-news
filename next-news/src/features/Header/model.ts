@@ -1,11 +1,13 @@
+import { useState} from 'react';
 import { ModelReturnProps } from './type';
 
 const useModel = (): ModelReturnProps  => {
 
-  const greeting = "hello";
+  const [showOffcanvas, setShowOffcanvas] = useState<boolean>(false);
 
   return {
-    greeting
+    showOffcanvas,
+    setShowOffcanvas
   };
 
 };

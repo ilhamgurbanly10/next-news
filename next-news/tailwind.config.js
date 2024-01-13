@@ -13,16 +13,18 @@ module.exports = {
       colors: {
         'primary-blue': '#183354',
         'primary-orange': '#F4796C',
+        'overlay': 'rgba(0,0,0,.6)'
       },
+      spacing: {
+        '100%': '100%',
+      }
     },
   },
   plugins: [
     function ({ addUtilities }) {
       const newUtilities = {
-        '.my-container': {
-          backgroundColor: '#1E3A8A', 
-          width: '300px', 
-          color: 'white'
+        '.main-container': {
+          maxWidth: '1532px'
         },
       };
       addUtilities(newUtilities, ['responsive', 'hover']); 
