@@ -21,13 +21,16 @@
     "baseUrl": "src/",
       "paths": {
         "@/shared/*": ["shared/*"],
+        "@/features/*": ["features/*"],
+        "@/widgets/*": ["widgets/*"],
+        "@/entities/*": ["entities/*"],
       }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "tailwind.config.js", "next.config.js"  ],
+, "tailwind.config.js", "next.config.js", "src/shared/icons/FacebookFilled/index.js"  ],
   "exclude": [
     "node_modules"
   ]

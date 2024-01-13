@@ -11,9 +11,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'custom-blue': 'green',
-        'custom-red': '#E53E3E',
-        'custom-green': '#38A169',
+        'primary-blue': '#183354',
+        'primary-orange': '#F4796C',
       },
     },
   },

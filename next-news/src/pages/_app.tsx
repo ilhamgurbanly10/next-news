@@ -1,7 +1,7 @@
 import '@/shared/styles/globals.css'
 import '@/shared/styles/globals.scss'
 import { appWithTranslation } from 'next-i18next'
-import Layout from 'entities/Layout'
+import Layout from 'features/Layout'
 
 function MyApp({ Component, pageProps }) {
   return (
