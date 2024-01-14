@@ -3,7 +3,7 @@ import { ModelReturnProps } from './type';
 
 const useModel = (): ModelReturnProps  => {
 
-  const [showOffcanvas, setShowOffcanvas] = useState<boolean>(false);
+  const [showOffcanvas, setShowOffcanvas] = useState<boolean>(true);
 
   return {
     showOffcanvas,

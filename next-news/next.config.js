@@ -11,6 +11,9 @@ const nextConfig = {
     config.resolve.alias['~'] = __dirname;
     return config;
   },
+  images: {
+    domains: ['themegenix.net'], 
+  },
 }
 
 module.exports = nextConfig

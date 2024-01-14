@@ -5,6 +5,7 @@ import Top from './Top';
 import Offcanvas from '@/shared/ui/Offcanvas';
 import { Bars } from '@/shared/icons';
 import Container from '@/shared/ui/Container';
+import OffcanvasContent from './OffcanvasContent';
 
 export const UI: React.FC<Props> = ({  })  => {
 
@@ -25,7 +26,9 @@ export const UI: React.FC<Props> = ({  })  => {
         </Container>
       </div>
 
-      <Offcanvas show={showOffcanvas} setShow={setShowOffcanvas}><p>Hello</p></Offcanvas>
+      <Offcanvas show={showOffcanvas} setShow={setShowOffcanvas}>
+        <OffcanvasContent setShow={setShowOffcanvas} />
+      </Offcanvas>
     
     </header>
   );

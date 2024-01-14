@@ -13,7 +13,10 @@ module.exports = {
       colors: {
         'primary-blue': '#183354',
         'primary-orange': '#F4796C',
-        'overlay': 'rgba(0,0,0,.6)'
+        'overlay': 'rgba(0,0,0,.6)',
+        'error': '#FF0000',
+        'loading': '#183354',
+        'success': '#008000'
       },
       spacing: {
         '100%': '100%',
