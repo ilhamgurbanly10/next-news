@@ -26,7 +26,7 @@ export const UI: React.FC<Props> = ({  })  => {
         </Container>
       </div>
 
-      <Offcanvas show={showOffcanvas} setShow={setShowOffcanvas}>
+      <Offcanvas show={showOffcanvas} setShow={setShowOffcanvas} className='hidden lg:block'>
         <OffcanvasContent setShow={setShowOffcanvas} />
       </Offcanvas>
     

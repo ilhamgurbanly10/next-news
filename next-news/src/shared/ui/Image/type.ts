@@ -6,6 +6,8 @@ export interface Props {
     alt?: string;
     quality?: number;
     loading?: 'lazy' | 'eager';
+    loadingText?: boolean;
+    errorText?: boolean;
 }
 
 export interface ModelReturnProps {
