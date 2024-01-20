@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         'primary-blue': '#183354',
         'primary-orange': '#F4796C',
+        'primary-grey': '#6D757F',
         'overlay': 'rgba(0,0,0,.6)',
         'error': '#FF0000',
         'loading': '#183354',

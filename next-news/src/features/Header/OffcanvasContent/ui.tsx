@@ -1,13 +1,13 @@
 import React, { useEffect} from 'react';
 import { useTranslation } from 'next-i18next'
 import { Props } from './type';
-import { Close } from '@/shared/icons';
+import { Close, Marker, Phone, Envelope } from '@/shared/icons';
 import Image from '@/shared/ui/Image';
 import Link from 'next/link';
 import useRecoil from '@/shared/state/useRecoil';
 import Loader from '@/shared/ui/Loader';
 import Error from '@/shared/ui/Error';
-
+import TextButton from '@/shared/ui/Buttons/TextButton';
 export const UI: React.FC<Props> = ({ className, setShow  })  => {
 
   const { t } = useTranslation('common');
@@ -43,7 +43,7 @@ export const UI: React.FC<Props> = ({ className, setShow  })  => {
         <div>
             <p className='mt-4 text-gray-500 leading-7 w-11/12'>{info.data?.title}</p>
 
-            <div className='flex justify-between mt-8 flex-wrap w-11/12'>
+            <div className='flex justify-between mt-10 flex-wrap w-11/12'>
 
               {info.data?.images?.map((item: string, i: number) => (
                 <div key={i} className='cursor-pointer rounded overflow-hidden mb-3'>
@@ -58,6 +58,25 @@ export const UI: React.FC<Props> = ({ className, setShow  })  => {
                 </div>
               ))}
 
+            </div>
+
+            <div className='mt-6'>
+              <h2 className='text-primary-blue font-bold text-2xl'>{t('get_in_touch')}</h2>
+                
+              <div className='mt-4'>
+                <div className='mt-4 flex items-center'>
+                  <span className='mr-3 text-lg w-6'><Envelope color={'#6D757F'}/></span>  <TextButton colorClassName='text-primary-grey' href={'/'} text={"info@nextnews.com"} className='text-lg'/>
+                </div>
+
+                <div className='mt-4 flex items-center'>
+                  <span className='mr-3 text-lg w-6 text-primary-grey'><Phone/></span>  <TextButton colorClassName='text-primary-grey' href={'/'} text={"+994551234567"} className='text-lg'/>
+                </div>
+
+                <div className='mt-4 flex items-center'>
+                  <span className='mr-3 text-lg w-6'><Marker color={'#6D757F'}/></span>  <TextButton colorClassName='text-primary-grey' href={'/'} text={"Baku, Azerbaijan"} className='text-lg'/>
+                </div>
+                
+              </div>
             </div>
 
         </div>

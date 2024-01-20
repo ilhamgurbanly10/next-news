@@ -6,3 +6,7 @@ export { UI as Bars } from './Bars';
 export { UI as Close } from './Close';
 export { UI as Loading } from './Loading';
 export { UI as Warning } from './Warning';
+export { UI as Marker } from './Marker';
+export { UI as Phone } from './Phone';
+export { UI as Envelope } from './Envelope';
+export { UI as Down } from './Down';
