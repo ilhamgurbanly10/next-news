@@ -11,5 +11,17 @@
     "errorOccurred": "Error Occurred",
     "offCanvasText": "The Argument In Favor Of Using Filler Text Goes Something Like This: If You Use Any Real Content In The Consulting Process Anytime You Reach.",
     "error": "Ups, something went wrong",
-    "get_in_touch": "Get In Touch"
+    "get_in_touch": "Get In Touch",
+    "home_page": "Home Page",
+    "about_us": "About Us",
+    "features": "Features",
+    "categories": "Categories",
+    "contact": "Contact",
+    "companies": "Companies",
+    "workers": "Workers",
+    "news": "News",
+    "all_news": "All News",
+    "last_news": "Last News",
+    "all_categories": "All Categories",
+    "filters": "Filters"
 }

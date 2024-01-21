@@ -9,6 +9,7 @@ import OffcanvasContent from './OffcanvasContent';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from './Navbar';
+import Search from './Search';
 
 export const UI: React.FC<Props> = ({  })  => {
 
@@ -40,7 +41,9 @@ export const UI: React.FC<Props> = ({  })  => {
             </Link>
           </div>
 
-          <div></div>
+          <div className="mr-8">
+            <Search />
+          </div>
 
         </Container>
 
