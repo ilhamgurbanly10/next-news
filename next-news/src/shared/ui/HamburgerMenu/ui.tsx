@@ -5,7 +5,8 @@ import { Close } from '@/shared/icons';
 export const UI: React.FC<Props> = ({ 
   className, 
   show,
-  setShow
+  setShow,
+  children
 })  => {
 
   return (
@@ -15,7 +16,7 @@ export const UI: React.FC<Props> = ({
           X
         </button>
         <div className={`bg-white absolute top-0 p-4 right-0 h-full w-9/12 ${show ? '' : ''}`}>
-          Hello
+          {children}
         </div>
 
     </div>

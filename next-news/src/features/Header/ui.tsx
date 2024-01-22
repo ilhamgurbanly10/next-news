@@ -60,7 +60,9 @@ export const UI: React.FC<Props> = ({  })  => {
 
       </div>
 
-      <HamburgerMenu show={showMenu} setShow={setShowMenu} />
+      <HamburgerMenu show={showMenu} setShow={setShowMenu}>
+        Hello
+      </HamburgerMenu>
 
       <Offcanvas show={showOffcanvas} setShow={setShowOffcanvas} className='hidden lg:block'>
         <OffcanvasContent setShow={setShowOffcanvas} />
