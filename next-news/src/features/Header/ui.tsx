@@ -10,10 +10,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from './Navbar';
 import Search from './Search';
+import HamburgerMenu from '@/shared/ui/HamburgerMenu';
 
 export const UI: React.FC<Props> = ({  })  => {
 
-  const { showOffcanvas, setShowOffcanvas } = useModel();
+  const { showOffcanvas, setShowOffcanvas, showMenu, setShowMenu } = useModel();
 
   return (
     <header className="header">
@@ -47,7 +48,19 @@ export const UI: React.FC<Props> = ({  })  => {
 
         </Container>
 
+        <Container className='flex lg:hidden items-center justify-between'>
+
+            <div>
+
+            </div>
+
+            <button type="button" onClick={() => { setShowMenu(true); }}>Toggle</button>
+
+        </Container>
+
       </div>
+
+      <HamburgerMenu show={showMenu} setShow={setShowMenu} />
 
       <Offcanvas show={showOffcanvas} setShow={setShowOffcanvas} className='hidden lg:block'>
         <OffcanvasContent setShow={setShowOffcanvas} />

@@ -1,17 +1,23 @@
 import React from 'react';
-import { useTranslation } from 'next-i18next'
-import { FacebookFilled, TwitterOutlined, InstagramOutlined, LinkedinFilled } from '@/shared/icons';
+import { Search } from '@/shared/icons';
 import Input from '@/shared/ui/Input';
+import useModel from './model';
 
 export const UI: React.FC = ({  })  => {
 
-  const { t } = useTranslation('common');
+  const {value, setValue, onFinish} = useModel();
 
   return (
     <div className="search">
 
-      <form onSubmit={(e) => { e.preventDefault(); }}>
-        <Input />
+      <form onSubmit={(e) => { e.preventDefault(); onFinish(); }}>
+        <Input 
+          value={value}
+          setValue={setValue}
+          placeholder="Search Here..."
+          icon={<Search />}
+          iconPosition="right"
+        />
       </form>
 
     </div>

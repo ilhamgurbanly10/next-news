@@ -17,7 +17,8 @@ module.exports = {
         'overlay': 'rgba(0,0,0,.6)',
         'error': '#FF0000',
         'loading': '#183354',
-        'success': '#008000'
+        'success': '#008000',
+        'overlay': 'rgba(0, 0, 0, .5)'
       },
       spacing: {
         '100%': '100%',
