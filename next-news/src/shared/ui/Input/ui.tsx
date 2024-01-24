@@ -46,7 +46,7 @@ export const UI: React.FC<Props> = ({
         />
         {icon && <span onClick={() => { if(!disabled) setTimeout(() => { input?.current?.focus()}, 300)}} className={`absolute z-10 ${iconPosition === "left" ? 'left-5' : 'right-5'} ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}`}>{icon}</span>}
         {error && <p className='text-error absolute top-full mt-2 text-xs'>{t(errorMes)}</p>}
-        <span onClick={() => { setValue(""); if (onClear) onClear(); }} className={`absolute transition-all z-10 cursor-pointer ${icon ? iconPosition === "right" ? 'right-12' : 'right-5' : 'right-5'} ${value === "" ? '-right-10' : ''} ${!allowClear ? 'opacity-0 invisible' : ''}`}><Close color="#6D757F" /></span>
+        <span onClick={() => { setValue(""); if (onClear) onClear(); }} className={`absolute transition-all z-10 cursor-pointer ${icon ? iconPosition === "right" ? 'right-12' : 'right-5' : 'right-5'} ${value === "" ? '-right-5' : ''} ${!allowClear ? 'opacity-0 invisible' : ''}`}><Close color="#6D757F" /></span>
       </div>
     </div>
   );

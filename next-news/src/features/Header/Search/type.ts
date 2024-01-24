@@ -1,3 +1,8 @@
+export interface Props {
+    className?: string;
+    rounded?: boolean;
+}
+
 export interface Path {
     href: string;
     label: string;
