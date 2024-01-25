@@ -10,10 +10,10 @@ export const paths: Parent[] = [
         active: true,
     },
     { 
-        isLink: true,
+        isLink: false,
         className: '',
         label: 'about_us',
-        href: "/",
+        href: "/a",
         disabled: false,
         active: false,
         children: [

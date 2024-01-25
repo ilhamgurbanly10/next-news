@@ -12,6 +12,7 @@ import Search from './Search';
 import HamburgerMenu from '@/shared/ui/HamburgerMenu';
 import IconicButton from '@/shared/ui/Buttons/IconicButton';
 import { Bars, FacebookFilled, TwitterOutlined, InstagramOutlined, LinkedinFilled, YoutubeFilled } from '@/shared/icons';
+import MobileNavbar from './MobileNavbar';
 
 export const UI: React.FC<Props> = ({  })  => {
 
@@ -85,6 +86,8 @@ export const UI: React.FC<Props> = ({  })  => {
 
               <Search className="mt-4" rounded={false} />
 
+              <MobileNavbar className='mt-6' />
+              
               <div className='flex justify-between mt-6'>
                  <IconicButton href="/" isLink={true} icon={<FacebookFilled color="#183354" />} />
                  <IconicButton href="/" isLink={true} icon={<TwitterOutlined color="#183354" />} />
