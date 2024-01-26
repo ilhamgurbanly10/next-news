@@ -13,10 +13,6 @@ export const UI: React.FC<Props> = ({}) => {
         metaTitle={t("metaTitle")}
         metaDescription={t("metaDescription")}
       />
-
-      <div style={{ width: "200px", height: "5000px", backgroundColor: "red" }}>
-        Hello
-      </div>
     </>
   );
 };

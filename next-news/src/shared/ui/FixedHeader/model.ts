@@ -10,7 +10,7 @@ const useModel = (): ModelReturnProps  => {
   const getHeaderHeight = (): number =>
     parseFloat(window.getComputedStyle(header.current, null)?.getPropertyValue("height"));
 
-  const toggleFixedHeader = () => {
+  const toggleFixedHeader = (): void => {
     const h = height.current || 200;
     setShow(Boolean(document?.documentElement?.scrollTop > h))
   }

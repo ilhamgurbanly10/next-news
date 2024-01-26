@@ -10,5 +10,6 @@ export { UI as Marker } from './Marker';
 export { UI as Phone } from './Phone';
 export { UI as Envelope } from './Envelope';
 export { UI as Down } from './Down';
+export { UI as Up } from './Up';
 export { UI as Search } from './Search';
 export { UI as YoutubeFilled } from './YoutubeFilled';
