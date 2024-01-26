@@ -6,4 +6,5 @@ export interface Props {
     colorClassName?: string;
     colorClassNameOnHover?: string;
     onClick?: () => void;
+    underline?: boolean;
 }

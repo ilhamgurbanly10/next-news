@@ -5,7 +5,7 @@ import Top from "./Top";
 import Offcanvas from "@/shared/ui/Offcanvas";
 import Container from "@/shared/ui/Container";
 import OffcanvasContent from "./OffcanvasContent";
-import Image from "next/image";
+import Image from "@/shared/ui/Image";
 import Link from "next/link";
 import Navbar from "./Navbar";
 import Search from "./Search";

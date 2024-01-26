@@ -12,8 +12,10 @@ module.exports = {
     extend: {
       colors: {
         'primary-blue': '#183354',
+        'secondary-blue': '#BACCE1',
         'primary-orange': '#F4796C',
         'primary-grey': '#6D757F',
+        'primary-black': '#0C1622',
         'overlay': 'rgba(0,0,0,.6)',
         'overlay-light': 'rgba(0,0,0,.4)',
         'error': '#FF0000',
@@ -22,6 +24,7 @@ module.exports = {
         'overlay': 'rgba(0, 0, 0, .5)'
       },
       spacing: {
+        'px.5': '.5px',
         '100%': '100%',
       },
       zIndex: {
@@ -34,6 +37,9 @@ module.exports = {
       const newUtilities = {
         '.main-container': {
           maxWidth: '1532px'
+        },
+        '.clip-path-right': {
+          clipPath: "polygon(0 0, 100% 0%, 90% 100%, 0% 100%)"
         },
       };
       addUtilities(newUtilities, ['responsive', 'hover']); 
