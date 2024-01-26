@@ -15,6 +15,7 @@ module.exports = {
         'primary-orange': '#F4796C',
         'primary-grey': '#6D757F',
         'overlay': 'rgba(0,0,0,.6)',
+        'overlay-light': 'rgba(0,0,0,.4)',
         'error': '#FF0000',
         'loading': '#183354',
         'success': '#008000',
@@ -22,6 +23,9 @@ module.exports = {
       },
       spacing: {
         '100%': '100%',
+      },
+      zIndex: {
+        'z-loader': '100',
       }
     },
   },
