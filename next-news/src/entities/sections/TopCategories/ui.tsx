@@ -19,6 +19,7 @@ export const UI: React.FC<Props> = ({ className }) => {
           className="w-full text-center"
           centerUnderline={true}
         />
+
         <MainText
           className="mt-4 w-full lg:w-5/12 text-center"
           text="top_categories_desc"
