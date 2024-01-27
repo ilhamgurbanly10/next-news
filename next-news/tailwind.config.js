@@ -21,7 +21,10 @@ module.exports = {
         'error': '#FF0000',
         'loading': '#183354',
         'success': '#008000',
-        'overlay': 'rgba(0, 0, 0, .5)'
+        'overlay': 'rgba(0, 0, 0, .5)',
+        'blues': {
+          '100': '#dbe4ef'
+        }
       },
       spacing: {
         'px.5': '.5px',

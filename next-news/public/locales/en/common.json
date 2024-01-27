@@ -23,5 +23,11 @@
     "all_news": "All News",
     "last_news": "Last News",
     "all_categories": "All Categories",
-    "filters": "Filters"
+    "filters": "Filters",
+    "get_daily_food": "Want To Get New Food New Daily?",
+    "name": "Name",
+    "email": "Email",
+    "submit_now": "Submit now",
+    "required_field": "This field is required",
+    "invalid_email": "Email is invalid"
 }
