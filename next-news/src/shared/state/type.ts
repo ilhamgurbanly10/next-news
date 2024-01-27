@@ -3,6 +3,7 @@ export interface Hook {
     fetchUser: any;
     info: InfoAtom;
     fetchInfo: () => void;
+    topCategories: TopCategories;
 }
 
 export interface User {
@@ -21,6 +22,18 @@ export interface Info {
 
 export interface InfoAtom {
     data: Info | null;
+    error: boolean;
+    loading: boolean;
+}
+
+export interface TopCategory {
+    src: string;
+    label: string;
+    href: string;
+}
+
+export interface TopCategories {
+    data: TopCategory[];
     error: boolean;
     loading: boolean;
 }

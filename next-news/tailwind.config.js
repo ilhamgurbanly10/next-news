@@ -44,6 +44,9 @@ module.exports = {
         '.clip-path-right': {
           clipPath: "polygon(0 0, 100% 0%, 90% 100%, 0% 100%)"
         },
+        '.clip-path-center': {
+          clipPath: "polygon(0 0, 100% 0, 90% 100%, 10% 100%)"
+        },
       };
       addUtilities(newUtilities, ['responsive', 'hover']); 
     },
