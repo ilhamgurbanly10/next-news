@@ -2,7 +2,7 @@ import React from "react";
 import Head from "@/shared/ui/Head";
 import { useTranslation } from "next-i18next";
 import { Props } from "./type";
-import GetDailyFood from "@/entities/GetDailyFood";
+import GetDailyFood from "@/entities/sections/GetDailyFood";
 
 export const UI: React.FC<Props> = ({}) => {
   const { t } = useTranslation("common");
