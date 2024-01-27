@@ -4,9 +4,27 @@ import { useTranslation } from "next-i18next";
 import Button from "@/shared/ui/Buttons/Button";
 import Input from "@/shared/ui/Input";
 import useModel from "./model";
+import { CheckCircleFilled, WarningOutlined } from "@ant-design/icons";
+import { notification } from "antd";
 
 export const UI: React.FC<Props> = ({ className }) => {
   const { t } = useTranslation("common");
+
+  const successNotify = (): void => {
+    notification.open({
+      message: t("sending_email"),
+      description: t("email_is_sended_successfully"),
+      icon: <CheckCircleFilled className={"text-success"} />,
+    });
+  };
+
+  const errorNotify = (): void => {
+    notification.open({
+      message: t("sending_email"),
+      description: t("email_could_not_be_sended"),
+      icon: <WarningOutlined className={"text-error"} />,
+    });
+  };
 
   const {
     name,
@@ -14,7 +32,6 @@ export const UI: React.FC<Props> = ({ className }) => {
     email,
     setEmail,
     disabled,
-    loading,
     onFinish,
     nameError,
     emailError,
@@ -25,9 +42,10 @@ export const UI: React.FC<Props> = ({ className }) => {
 
   return (
     <form
-      onSubmit={(e) => {
+      onSubmit={async (e): Promise<void> => {
         e.preventDefault();
-        onFinish();
+        const success: boolean = await onFinish();
+        success ? successNotify() : errorNotify();
       }}
       className={`get-daily-food-form w-full flex lg:justify-end flex flex-col lg:flex-row items-center ${
         className ? className : ""
@@ -62,7 +80,7 @@ export const UI: React.FC<Props> = ({ className }) => {
       />
 
       <Button
-        disabled={disabled || loading}
+        disabled={disabled}
         text={t("submit_now")}
         buttonType="submit"
         className={`w-full md:w-auto ${

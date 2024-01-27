@@ -1,6 +1,11 @@
 import { atom } from 'recoil';
 import {UserAtom, InfoAtom} from './type';
 
+export const loadingState = atom<boolean>({
+  key: 'loadingState',
+  default: false
+});
+
 export const userState = atom<UserAtom>({
   key: 'userState',
   default: {

@@ -1,14 +1,16 @@
 import { useState, useMemo} from 'react';
 import { ModelReturnProps } from './type';
 import { useForm } from '@/shared/hooks';
+import { useLoading } from "@/shared/hooks";
+import { postGetDailyFood } from '@/shared/utils/post/email';
 
 const useModel = (): ModelReturnProps  => {
 
+  const { loading } = useLoading();
   const { isEmailValid } = useForm();
 
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
-  const [loading, setLoading] = useState<boolean>(false);
   const [nameWritten, setNameWritten] = useState<boolean>(false);
   const [emailWritten, setEmailWritten] = useState<boolean>(false);
 
@@ -30,10 +32,25 @@ const useModel = (): ModelReturnProps  => {
 
   const canSend = (): boolean => email === "" || name === "" ? false : true;
 
-  const onFinish = (): void => {
+  const setDefault = (): void => {
+      setName('');
+      setEmail('');
+      setNameWritten(false);
+      setEmailWritten(false);
+  }
+
+  const onFinish = async (): Promise<boolean> => {
     setNameWritten(true);
     setEmailWritten(true);
-    if(canSend() && !disabled) { setLoading(true); console.log("sended"); }
+    let success: boolean = false;
+    if(canSend() && !disabled) { 
+      loading.start();
+      let data = await postGetDailyFood(name, email);
+      loading.stop(); 
+      setDefault();
+      success = !data.error;
+    }
+    return success;
   }
 
   return {
@@ -42,7 +59,6 @@ const useModel = (): ModelReturnProps  => {
     email,
     setEmail,
     disabled,
-    loading,
     onFinish, 
     nameError,
     emailError,

@@ -7,9 +7,8 @@ export interface ModelReturnProps {
     setName: React.Dispatch<React.SetStateAction<string >>;
     email: string;
     setEmail: React.Dispatch<React.SetStateAction<string>>;
-    loading: boolean;
     disabled: boolean;
-    onFinish: () => void;
+    onFinish: () => Promise<boolean>;
     nameError: boolean;
     emailError: boolean;
     setNameWritten: React.Dispatch<React.SetStateAction<boolean>>;

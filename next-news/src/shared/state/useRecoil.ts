@@ -2,7 +2,7 @@ import {Hook, UserAtom, InfoAtom} from './type'
 import { useRecoilState } from 'recoil';
 import { userState, infoState } from './atoms';
 import { getUser } from '@/shared/utils/get/user';
-import { getInfo } from '../utils/get/general';
+import { getInfo } from '@/shared/utils/get/general';
 
 const useRecoil = (): Hook => {
 

@@ -1,4 +1,3 @@
-import { useState, useMemo} from 'react';
 import { Props } from './type';
 
 export const Hook = (): Props  => {

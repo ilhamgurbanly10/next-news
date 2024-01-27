@@ -1,6 +1,13 @@
 import { selector } from 'recoil';
-import { userState, infoState } from './atoms';
+import { userState, infoState, loadingState } from './atoms';
 import {UserAtom, InfoAtom} from './type';
+
+export const loadingSelector = selector({
+  key: 'loadingSelector',
+  get: ({ get }) => {
+    return get<boolean>(loadingState);
+  },
+});
 
 export const userSelector = selector({
   key: 'userSelector',
