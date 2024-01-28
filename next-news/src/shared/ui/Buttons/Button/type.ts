@@ -4,7 +4,7 @@ export interface Props {
     className?: string;
     isLink?: boolean;
     onClick?: () => void;
-    type?: 'primary';
+    type?: 'primary' | 'secondary';
     buttonType?:  "button" | "submit" | "reset";
     disabled?: boolean;
 }
@@ -12,6 +12,8 @@ export interface Props {
 export interface BtnType {
     primary: string;
     primaryDisabled: string;
+    secondary: string;
+    secondaryDisabled: string;
 }
 
 export interface ModelReturnProps {

@@ -4,6 +4,7 @@ import { useTranslation } from "next-i18next";
 import { Props } from "./type";
 import GetDailyFood from "@/entities/sections/GetDailyFood";
 import TopCategories from "@/entities/sections/TopCategories";
+import WeeklyBestRecipes from "@/entities/sections/WeeklyBestRecipes";
 
 export const UI: React.FC<Props> = ({}) => {
   const { t } = useTranslation("common");
@@ -18,6 +19,7 @@ export const UI: React.FC<Props> = ({}) => {
 
       <GetDailyFood />
       <TopCategories />
+      <WeeklyBestRecipes />
     </>
   );
 };

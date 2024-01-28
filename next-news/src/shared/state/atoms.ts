@@ -1,5 +1,5 @@
 import { atom } from 'recoil';
-import {UserAtom, InfoAtom, TopCategories} from './type';
+import {UserAtom, InfoAtom, TopCategories, WeeklyBestRecipes} from './type';
 
 export const loadingState = atom<boolean>({
   key: 'loadingState',
@@ -55,9 +55,55 @@ export const topCategoriesState = atom<TopCategories>({
         href: '/'
       },
       {
-        src: "https://themegenix.net/html/zaira/assets/img/images/categories_img05.png",
+        src: "https://themegenix.net/html/zaira/assets/img/images/categories_img06.png",
         label: "pizza",
         href: '/'
+      }
+    ],
+    loading: false
+  },
+});
+
+export const weeklyBestRecipesState = atom<WeeklyBestRecipes>({
+  key: 'weeklyBestRecipesState',
+  default: {
+    error: false,
+    data: [
+      {
+        id: 1,
+        date: '27 August, 2024',
+        src: "https://themegenix.net/html/zaira/assets/img/blog/recipe_img01.jpg",
+        label: "BREAKFAST",
+        title: "How To Design An Effective User Onboarding Flow",
+        user_name: "ADMIN",
+        href: "/"
+      },
+      {
+        id: 2,
+        date: '27 August, 2024',
+        src: "https://themegenix.net/html/zaira/assets/img/blog/recipe_img02.jpg",
+        label: "LUNCH",
+        title: "Exploring The Potential Of Web Workers For Multithreading",
+        user_name: "ADMIN",
+        href: "/"
+      },
+      {
+        id: 3,
+        date: '27 August, 2024',
+        src: "https://themegenix.net/html/zaira/assets/img/blog/recipe_img03.jpg",
+        label: "DESSERT",
+        title: "Favorite Browned Butter Chocolate Cookies Daily Breakfast",
+        user_name: "ADMIN",
+        href: "/"
+      },
+      {
+        id: 4,
+        date: '27 August, 2024',
+        src: "https://themegenix.net/html/zaira/assets/img/blog/recipe_img04.jpg",
+        label: "APPETIZER",
+        title: "The Potentially Dangerous Non Sibility Of Cookie Notices",
+        user_name: "ADMIN",
+        href: "/"
       }
     ],
     loading: false

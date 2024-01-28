@@ -1,6 +1,6 @@
-import {Hook, UserAtom, InfoAtom, TopCategories} from './type'
+import {Hook, UserAtom, InfoAtom, TopCategories, WeeklyBestRecipes} from './type'
 import { useRecoilState } from 'recoil';
-import { userState, infoState, topCategoriesState } from './atoms';
+import { userState, infoState, topCategoriesState, weeklyBestRecipesState } from './atoms';
 import { getUser } from '@/shared/utils/get/user';
 import { getInfo } from '@/shared/utils/get/general';
 
@@ -10,6 +10,7 @@ const useRecoil = (): Hook => {
   const [user, setUser] = useRecoilState<UserAtom>(userState);
   const [info, setInfo] = useRecoilState<InfoAtom>(infoState);
   const [topCategories, setTopCategories] = useRecoilState<TopCategories>(topCategoriesState);
+  const [weeklyBestRecipes, setWeeklyBestRecipes] = useRecoilState<WeeklyBestRecipes>(weeklyBestRecipesState);
 
   // fetching
   const fetchUser = async () => {
@@ -26,7 +27,7 @@ const useRecoil = (): Hook => {
     setInfo({data: data.data, error: data.error, loading: data.loading});
   }
 
-  return { user, fetchUser, info, fetchInfo, topCategories };
+  return { user, fetchUser, info, fetchInfo, topCategories, weeklyBestRecipes };
 
 };
 
