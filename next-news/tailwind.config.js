@@ -47,6 +47,10 @@ module.exports = {
         '.clip-path-center': {
           clipPath: "polygon(0 0, 100% 0, 90% 100%, 10% 100%)"
         },
+        '.bg-linear-gradient': {
+            backgroundImage: 'linear-gradient(180deg, rgba(24, 51, 84, 0.00) 0%, #183354 84.90%)',
+          }
+        
       };
       addUtilities(newUtilities, ['responsive', 'hover']); 
     },

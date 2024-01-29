@@ -34,11 +34,11 @@ export const UI: React.FC<Props> = ({
         </div>
       </Link>
 
-      <div className="mt-4 md:mt-0 flex flex-col items-start md:ml-6 w-8/12">
+      <div className="mt-4 md:mt-0 flex flex-col items-start md:ml-6 md:w-8/12">
         <SmallButton text={label} isLink={true} href={href} className={``} />
 
         <Link href={href}>
-          <MainTitle text={title} className="mt-4" />
+          <MainTitle text={title} className="mt-4 cursor-pointer" />
         </Link>
         <div className="inline-flex items-center mt-4">
           <span className="inline-flex mr-4 items-center text-primary-grey font-bold">
