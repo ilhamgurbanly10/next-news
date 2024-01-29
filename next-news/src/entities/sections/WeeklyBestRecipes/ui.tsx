@@ -2,8 +2,8 @@ import React from "react";
 import { Props } from "./type";
 import MainTitle from "@/shared/ui/MainTitle";
 import Container from "@/shared/ui/Container";
-import MainText from "@/shared/ui/MainText";
-import RoundedCard from "@/shared/ui/RoundedCard";
+import Card from "@/shared/ui/Card";
+import BigCard from "@/shared/ui/BigCard";
 import useRecoil from "@/shared/state/useRecoil";
 import { WeeklyBestRecipe } from "@/shared/state/type";
 import Loader from "@/shared/ui/Loader";
@@ -40,9 +40,42 @@ export const UI: React.FC<Props> = ({ className }) => {
           <Underline />
 
           <div className="flex flex-col lg:flex-row mt-8">
-            <div className="w-full lg:w-6/12 lg:pr-4">Left</div>
+            <div className="w-full lg:w-6/12 lg:pr-4">
+              {data?.data
+                ?.slice(0, 1)
+                ?.map((data: WeeklyBestRecipe, i: number) => (
+                  <BigCard
+                    key={i}
+                    href={data.href}
+                    src={data.src}
+                    label={data.label}
+                    title={data.title}
+                    user_name={data.user_name}
+                    date={data.date}
+                  />
+                ))}
+            </div>
 
-            <div className="w-full lg:w-6/12 lg:pl-4 mt-6 lg:mt-0">Right</div>
+            <div className="w-full lg:w-6/12 lg:pl-4 mt-6 lg:mt-0">
+              {!data.loading && !data.error && (
+                <div className="w-full flex flex-col">
+                  {data?.data
+                    ?.slice(1)
+                    ?.map((data: WeeklyBestRecipe, i: number) => (
+                      <Card
+                        key={i}
+                        href={data.href}
+                        src={data.src}
+                        label={data.label}
+                        title={data.title}
+                        user_name={data.user_name}
+                        date={data.date}
+                        className="mt-4 first:mt-0"
+                      />
+                    ))}
+                </div>
+              )}
+            </div>
           </div>
 
           <Loader
@@ -56,19 +89,6 @@ export const UI: React.FC<Props> = ({ className }) => {
             className="text-2xl mt-8"
             showText={true}
           />
-
-          {/* {!data.loading && !data.error && (
-            <div className="w-full flex gap-4 flex-wrap items-center justify-between mt-8">
-              {data?.data?.map((data: WeeklyBestRecipe, i: number) => (
-                <RoundedCard
-                  key={i}
-                  href={data.href}
-                  src={data.src}
-                  label={data.label}
-                />
-              ))}
-            </div>
-          )} */}
         </div>
       </Section>
     </Container>

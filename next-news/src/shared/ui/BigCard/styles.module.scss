@@ -1,0 +1,3 @@
+.card {
+    .cardImg:is(:hover, :active) { transform: scale(1.2);}
+}
