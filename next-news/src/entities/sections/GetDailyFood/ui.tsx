@@ -8,7 +8,7 @@ import Container from "@/shared/ui/Container";
 export const UI: React.FC<Props> = ({ className }) => {
   return (
     <Container>
-      <Section className={`mt-14 ${className ? className : ""}`}>
+      <Section className={`mt-0 ${className ? className : ""}`}>
         <div className="px-4 w-full bg-blues-100 lg:px-24 py-14 rounded flex flex-col lg:flex-row items-center justify-between">
           <MainTitle
             text="get_daily_food"

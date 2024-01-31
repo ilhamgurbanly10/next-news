@@ -1,0 +1,10 @@
+.img-hover-effect {
+    &:is(:hover, :active) .img-hover-effect-img { transform: scale(1.2);}
+}
+
+.overlay-hover-effect {
+    .overlay-hover-effect-overlay { transform: scale(0);}
+    &:is(:hover, :active) {
+        .overlay-hover-effect-overlay { transform: scale(1);}
+    }
+}

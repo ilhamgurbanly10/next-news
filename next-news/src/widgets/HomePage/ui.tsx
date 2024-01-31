@@ -5,6 +5,7 @@ import { Props } from "./type";
 import GetDailyFood from "@/entities/sections/GetDailyFood";
 import TopCategories from "@/entities/sections/TopCategories";
 import WeeklyBestRecipes from "@/entities/sections/WeeklyBestRecipes";
+import Hero from "@/entities/sections/Hero";
 
 export const UI: React.FC<Props> = ({}) => {
   const { t } = useTranslation("common");
@@ -17,6 +18,7 @@ export const UI: React.FC<Props> = ({}) => {
         metaDescription={t("metaDescription")}
       />
 
+      <Hero />
       <GetDailyFood />
       <TopCategories />
       <WeeklyBestRecipes />

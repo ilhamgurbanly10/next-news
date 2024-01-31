@@ -1,7 +1,0 @@
-.roundedCard {
-    .roundedCardOverlay { transform: scale(0);}
-    &:is(:hover, :active) {
-        .roundedCardImg { transform: scale(1.2);}
-        .roundedCardOverlay { transform: scale(1);}
-    }
-}

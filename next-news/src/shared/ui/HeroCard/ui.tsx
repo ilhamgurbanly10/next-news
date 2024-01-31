@@ -18,26 +18,33 @@ export const UI: React.FC<Props> = ({
   const { t } = useTranslation("common");
   return (
     <div
-      className={`img-hover-effect card inline-flex flex-col md:flex-row md:items-center ${
+      className={`hero-card img-hover-effect w-full inline-flex flex-col items-center ${
         className ? className : ""
       }`}
     >
       <Link href={href}>
-        <div className="overflow-hidden w-40 h-32 lg:w-48 lg:h-40 rounded-md">
-          <div
-            style={{ backgroundImage: `url("${src}")` }}
-            className={`img-hover-effect-img w-full h-full cursor-pointer shadow-2xl transition-all duration-700 scale-100 bg-center bg-cover inset-0`}
+        <div className="relative flex w-full justify-center">
+          <div className="overflow-hidden w-40 h-72 md:h-96 w-full rounded-md">
+            <div
+              style={{ backgroundImage: `url("${src}")` }}
+              className={`img-hover-effect-img w-full h-full cursor-pointer shadow-2xl transition-all duration-700 scale-100 bg-center bg-cover inset-0`}
+            />
+          </div>
+          <SmallButton
+            text={label}
+            isLink={true}
+            href={href}
+            className="absolute -bottom-3"
           />
         </div>
       </Link>
 
-      <div className="mt-4 md:mt-0 flex flex-col items-start md:ml-6 md:w-8/12">
-        <SmallButton text={label} isLink={true} href={href} className={``} />
-
+      <div className="mt-4 flex flex-col items-center">
         <Link href={href}>
-          <MainTitle text={title} className="mt-4 cursor-pointer" />
+          <MainTitle text={title} className="mt-4 cursor-pointer text-center" />
         </Link>
-        <div className="inline-flex items-center mt-4">
+
+        <div className="inline-flex items-center mt-2">
           <span className="inline-flex mr-4 items-center text-primary-grey font-bold">
             <User />
             <span className="uppercase ml-2">BY {user_name}</span>
