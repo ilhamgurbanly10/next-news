@@ -1,7 +1,7 @@
 import React from "react";
 import { Props } from "./type";
-import Header from "@/features/Header";
-import Footer from "@/features/Footer";
+import Header from "@/entities/Header";
+import Footer from "@/entities/Footer";
 import FixedHeader from "@/shared/ui/FixedHeader";
 import BackToTopBtn from "@/shared/ui/BackToTopBtn";
 import MainLoader from "@/shared/ui/MainLoader";

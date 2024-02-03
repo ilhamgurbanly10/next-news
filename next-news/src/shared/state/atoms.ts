@@ -1,6 +1,11 @@
 import { atom } from 'recoil';
 import {UserAtom, InfoAtom, TopCategories, WeeklyBestRecipes, Hero} from './type';
 
+export const sloganState = atom<string>({
+  key: 'sloganState',
+  default: 'hi slogan'
+});
+
 export const loadingState = atom<boolean>({
   key: 'loadingState',
   default: false
